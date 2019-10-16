@@ -4,22 +4,16 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import jnr.ffi.annotations.In;
-import net.jamie.datamodels.CurrencyItem;
+import net.jamie.datamodels.mapresponse.CurrencyItem;
 import net.jamie.pages.HomePage;
 import net.jamie.pages.WatchListPage;
-import org.apache.commons.collections.ArrayStack;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.linesOf;
-import static org.junit.Assert.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class HomepageViewsStepDefinitions {
 

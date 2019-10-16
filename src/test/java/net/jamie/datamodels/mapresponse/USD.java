@@ -1,5 +1,5 @@
 
-package net.jamie.datamodels;
+package net.jamie.datamodels.mapresponse;
 
 import io.cucumber.datatable.dependency.com.fasterxml.jackson.annotation.*;
 
@@ -12,22 +12,22 @@ import java.util.Map;
     "price",
     "last_updated"
 })
-public class LTC {
+public class USD {
 
     @JsonProperty("price")
-    private Double price;
+    private Integer price;
     @JsonProperty("last_updated")
     private String lastUpdated;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     @JsonProperty("price")
-    public Double getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
     @JsonProperty("price")
-    public void setPrice(Double price) {
+    public void setPrice(Integer price) {
         this.price = price;
     }
 

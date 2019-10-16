@@ -1,10 +1,10 @@
 
-package net.jamie.datamodels;
+package net.jamie.datamodels.mapresponse;
+
+import io.cucumber.datatable.dependency.com.fasterxml.jackson.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import io.cucumber.datatable.dependency.com.fasterxml.jackson.annotation.*;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({

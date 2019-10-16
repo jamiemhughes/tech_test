@@ -1,5 +1,5 @@
 
-package net.jamie.datamodels;
+package net.jamie.datamodels.priceconversion;
 
 import io.cucumber.datatable.dependency.com.fasterxml.jackson.annotation.*;
 
@@ -13,7 +13,8 @@ import java.util.Map;
     "error_code",
     "error_message",
     "elapsed",
-    "credit_count"
+    "credit_count",
+    "notice"
 })
 public class Status {
 
@@ -27,6 +28,8 @@ public class Status {
     private Integer elapsed;
     @JsonProperty("credit_count")
     private Integer creditCount;
+    @JsonProperty("notice")
+    private String notice;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
@@ -78,6 +81,16 @@ public class Status {
     @JsonProperty("credit_count")
     public void setCreditCount(Integer creditCount) {
         this.creditCount = creditCount;
+    }
+
+    @JsonProperty("notice")
+    public String getNotice() {
+        return notice;
+    }
+
+    @JsonProperty("notice")
+    public void setNotice(String notice) {
+        this.notice = notice;
     }
 
     @JsonAnyGetter
