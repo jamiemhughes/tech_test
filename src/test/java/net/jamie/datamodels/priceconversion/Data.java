@@ -1,5 +1,5 @@
 
-package net.jamie.datamodels;
+package net.jamie.datamodels.priceconversion;
 
 import io.cucumber.datatable.dependency.com.fasterxml.jackson.annotation.*;
 
@@ -9,19 +9,19 @@ import java.util.Map;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "symbol",
     "id",
+    "symbol",
     "name",
     "amount",
     "last_updated",
     "quote"
 })
-public class PriceConversionData {
+public class Data {
 
+    @JsonProperty("id")
+    private Integer id;
     @JsonProperty("symbol")
     private String symbol;
-    @JsonProperty("id")
-    private String id;
     @JsonProperty("name")
     private String name;
     @JsonProperty("amount")
@@ -33,6 +33,16 @@ public class PriceConversionData {
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
+    @JsonProperty("id")
+    public Integer getId() {
+        return id;
+    }
+
+    @JsonProperty("id")
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     @JsonProperty("symbol")
     public String getSymbol() {
         return symbol;
@@ -41,16 +51,6 @@ public class PriceConversionData {
     @JsonProperty("symbol")
     public void setSymbol(String symbol) {
         this.symbol = symbol;
-    }
-
-    @JsonProperty("id")
-    public String getId() {
-        return id;
-    }
-
-    @JsonProperty("id")
-    public void setId(String id) {
-        this.id = id;
     }
 
     @JsonProperty("name")

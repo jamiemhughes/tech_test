@@ -1,4 +1,4 @@
-package net.jamie.datamodels;
+package net.jamie.datamodels.mapresponse;
 
 import org.jetbrains.annotations.NotNull;
 

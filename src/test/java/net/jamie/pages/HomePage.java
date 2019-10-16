@@ -1,21 +1,14 @@
 package net.jamie.pages;
 
-import com.paulhammant.ngwebdriver.ByAngularModel;
-import net.serenitybdd.core.SerenitySystemProperties;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
-import net.serenitybdd.core.pages.WebElementState;
-import net.thucydides.core.ThucydidesSystemProperty;
 import net.thucydides.core.annotations.DefaultUrl;
-import net.thucydides.core.annotations.Managed;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 
-import javax.swing.text.JTextComponent;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -29,7 +22,7 @@ public class HomePage extends PageObject {
     @FindBy(linkText = "Watchlist")
     public WebElementFacade getWatchList;
 
-    By theCurrenciesResultItemLocator = By.cssSelector("table#currencies tbody tr");
+    By theCurrenciesResultItemLocator = By.cssSelector("tr[role='row']");
 
 
     public HomePage(WebDriver driver) {
@@ -40,6 +33,7 @@ public class HomePage extends PageObject {
     public List<CurrencyItem> getAllCurrencyResults() {
         return findAll (theCurrenciesResultItemLocator )
                 .stream()
+                .skip(1)
                 .map( elm -> new CurrencyItem( elm ) )
                 .collect( Collectors.toList() )
                 ;

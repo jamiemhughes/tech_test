@@ -1,5 +1,5 @@
 
-package net.jamie.datamodels;
+package net.jamie.datamodels.priceconversion;
 
 import io.cucumber.datatable.dependency.com.fasterxml.jackson.annotation.*;
 
@@ -12,7 +12,7 @@ import java.util.Map;
     "price",
     "last_updated"
 })
-public class GBP {
+public class BOB {
 
     @JsonProperty("price")
     private Double price;

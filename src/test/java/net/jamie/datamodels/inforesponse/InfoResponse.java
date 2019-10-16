@@ -1,35 +1,24 @@
 
-package net.jamie.datamodels;
+package net.jamie.datamodels.inforesponse;
 
 import io.cucumber.datatable.dependency.com.fasterxml.jackson.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
 
-
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "priceConversionData",
-    "status"
+    "status",
+    "data"
 })
-public class PriceConversionResponse {
+public class InfoResponse {
 
-    @JsonProperty("priceConversionData")
-    private PriceConversionData priceConversionData;
     @JsonProperty("status")
     private Status status;
+    @JsonProperty("data")
+    private Data data;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
-
-    @JsonProperty("priceConversionData")
-    public PriceConversionData getPriceConversionData() {
-        return priceConversionData;
-    }
-
-    @JsonProperty("priceConversionData")
-    public void setPriceConversionData(PriceConversionData priceConversionData) {
-        this.priceConversionData = priceConversionData;
-    }
 
     @JsonProperty("status")
     public Status getStatus() {
@@ -39,6 +28,16 @@ public class PriceConversionResponse {
     @JsonProperty("status")
     public void setStatus(Status status) {
         this.status = status;
+    }
+
+    @JsonProperty("data")
+    public Data getData() {
+        return data;
+    }
+
+    @JsonProperty("data")
+    public void setData(Data data) {
+        this.data = data;
     }
 
     @JsonAnyGetter

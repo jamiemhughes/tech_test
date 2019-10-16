@@ -1,5 +1,5 @@
 
-package net.jamie.datamodels;
+package net.jamie.datamodels.mapresponse;
 
 import io.cucumber.datatable.dependency.com.fasterxml.jackson.annotation.*;
 

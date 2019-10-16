@@ -1,10 +1,11 @@
 
-package net.jamie.datamodels;
+package net.jamie.datamodels.mapresponse;
+
+import io.cucumber.datatable.dependency.com.fasterxml.jackson.annotation.*;
+import net.jamie.datamodels.priceconversion.Status;
 
 import java.util.HashMap;
 import java.util.List;
-
-import io.cucumber.datatable.dependency.com.fasterxml.jackson.annotation.*;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
